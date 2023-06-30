@@ -33,7 +33,7 @@
 
 
 
-## Quantum simulation
+## Quantum & Machine Learning
 Relevant scripts and data for the paper entitled "Practical Circuit Optimization Algorithm for Quantum Simulation Based on Template Matching"
 
 ## Table of contents

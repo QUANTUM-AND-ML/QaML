@@ -34,7 +34,7 @@
 
 
 ## Quantum & Machine Learning
-Relevant scripts and data for the paper entitled "Practical Circuit Optimization Algorithm for Quantum Simulation Based on Template Matching"
+Relevant scripts and data for the paper entitled "Output Estimation of Quantum Circuits based on Graph Neural Network"
 
 ## Table of contents
 * [**Previous work**](#Previous-work)

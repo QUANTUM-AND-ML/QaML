@@ -7,7 +7,7 @@
 
 
 <p align="center">
-    <a href="https://github.com/QUANTUM-AND-ML/QUANTUM-QuantumSimulation/blob/main/LICENSE">
+    <a href="https://github.com/QUANTUM-AND-ML/QaML/blob/main/LICENSE">
         <img alt="MIT License" src="https://img.shields.io/github/license/QUANTUM-AND-ML/QUANTUM-QuantumSimulation">
     </a>
     <a href="https://www.python.org/downloads/release/python-3813/">
@@ -16,7 +16,7 @@
     <a href="https://github.com/search?q=repo%3AQUANTUM-AND-ML%2FQaML++language%3APython&type=code">
         <img alt="Language" src="https://img.shields.io/github/languages/top/QUANTUM-AND-ML/QUANTUM-QuantumSimulation">
     </a>
-   <a href="https://github.com/QUANTUM-AND-ML/QUANTUM-QuantumSimulation/activity">
+   <a href="https://github.com/QUANTUM-AND-ML/QaML/activity">
         <img alt="Activity" src="https://img.shields.io/github/last-commit/QUANTUM-AND-ML/QUANTUM-QuantumSimulation">
     </a>
        <a href="https://www.nsfc.gov.cn/english/site_1/index.html">

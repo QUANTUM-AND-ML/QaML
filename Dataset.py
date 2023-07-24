@@ -1,7 +1,7 @@
 from torch_geometric.data import InMemoryDataset
 import random
 from circuit_to_graph_with_noise import Dataset_graph_nqubits
-from Expectation_calculation_qiskit import Pst_calculation_qiskit, expectation_calculation_qiskit
+from Expectation_calculation_qiskit import expectation_calculation_qiskit, expectation_calculation_qiskit_with_noise
 from Simplification import simplification
 from torch_geometric.data import Data
 import numpy as np

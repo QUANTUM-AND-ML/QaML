@@ -2,7 +2,6 @@ from torch_geometric.data import InMemoryDataset
 import random
 from circuit_to_graph_with_noise import Dataset_graph_nqubits
 from expectation_and_ground_state_energy_calculation import expectation_calculation_qiskit, expectation_calculation_qiskit_with_noise, ground_state_energy_calculation
-from Simplification import simplification
 from torch_geometric.data import Data
 import numpy as np
 import torch
@@ -10,7 +9,7 @@ import matplotlib.pyplot as plt
 from qiskit_aer import noise
 import networkx as nx
 from qiskit import QuantumCircuit, transpile
-from Simplification import *
+from simplification import *
 from CNNS_generate_datas import CNNs_generate_datas
 from qiskit.quantum_info import Kraus, SuperOp
 from qiskit_aer import AerSimulator

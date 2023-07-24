@@ -36,13 +36,13 @@
 Relevant scripts and data for the paper entitled "Output Estimation of Quantum Circuits based on Graph Neural Network"
 
 ## Table of contents
-* [**Previous work**](#Previous-work)
+* [**Main work**](#Main-work)
 * [**Python scripts**](#Python-scripts)
 * [**Dependencies**](#Dependencies)
 * [**Benchmarking environment**](#Benchmarking-environment)
 
-## Previous work
-Our work in this paper builds on previous quantum simulation work. Our previous submission is called "[**Greedy algorithm based circuit optimization for near-term quantum simulation**](https://iopscience.iop.org/article/10.1088/2058-9565/ac796b)". In previous work, we develop a hardware-agnostic circuit optimization algorithm to reduce the overall circuit cost for Hamiltonian simulation problems. Our method employ a novel sub-circuit synthesis in intermediate representation and propose a greedy ordering scheme for gate cancellation to minimize the gate count and circuit depth.
+## Main work
+In this paper, motivated by the natural graph representation of quantum circuits, we propose a Graph Neural Networks (GNNs) based scheme to predict output expectation values of quantum circuits under noisy and noiseless situations. We first generate two large datasets which are classically simulated quantum circuits with analytical expectation values and random quantum circuits with noisy expectation values obtained on noisy simulators. Then, we transform each circuit in above datasets into the corresponding graph with gates and circuit properties as node features, where noise properties are embed as node features for noisy expectation values estimation. Next, graph neural network estimator is trained to predict single-qubit and two-qubits noisy and noiseless expectation values. Evaluated on 100 quantum circuits, the graph neural network estimator can achieve more than 0.90 $R^2$ scores, up to 0.998 and 0.991 R^2 scores under noiseless and noisy situations. Notably, our GNNs estimator is designed to be scalable, where the GNNs estimator trained using small-scale quantum circuits with few qubits and low depth of quantum circuits can effectively predict larger-scale quantum circuits.
 ## Python scripts
 Everyone can change the value of the parameter "**Hamiltonian =**" in the **main.py** file to compare the results of different optimizers.  
 

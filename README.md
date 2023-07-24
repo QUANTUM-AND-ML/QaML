@@ -36,9 +36,9 @@
 Relevant scripts and data for the paper entitled "Output Estimation of Quantum Circuits based on Graph Neural Network"
 
 ## Table of contents
-* [**Main work**](#Main work)
-* [**Results display**](#Results display)
-* [**Python scripts**](#Python scripts)
+* [**Main work**](#Main-work)
+* [**Results display**](#Results-display)
+* [**Python scripts**](#Python-scripts)
 * [**Dependencies**](#Dependencies)
 * [**Benchmarking environment**](#Benchmarking-environment)
 
@@ -46,7 +46,9 @@ Relevant scripts and data for the paper entitled "Output Estimation of Quantum C
 In this paper, motivated by the natural graph representation of quantum circuits, we propose a **Graph Neural Networks** (**GNNs**) based scheme to predict output expectation values of quantum circuits under noisy and noiseless situations. We first generate two large datasets which are classically simulated quantum circuits with analytical expectation values and random quantum circuits with noisy expectation values obtained on noisy simulators. Then, we transform each circuit in above datasets into the corresponding graph with gates and circuit properties as node features, where noise properties are embed as node features for noisy expectation values estimation. Next, graph neural network estimator is trained to predict single-qubit and two-qubits noisy and noiseless expectation values. Evaluated on 100 quantum circuits, the graph neural network estimator can achieve more than 0.90 $R^2$ scores, up to 0.998 and 0.991 $R^2$ scores under noiseless and noisy situations. Notably, our GNNs estimator is designed to be scalable, where the GNNs estimator trained using small-scale quantum circuits with few qubits and low depth of quantum circuits can effectively predict larger-scale quantum circuits.
 ## Results display
 **Table 1.** Noiseless expectation values of random circuits with different number of qubits and depth of circuits are predicted. The GNNs estimator is trained using dataset consisting of 10000 classically simulated quantum circuits and epoch is set as 50. In the table, “*N*” represents the number of qubits, and “*P*” represents the circuit depth.
-
+<p align="center">
+<img src="figures/Table_1.png" alt="Q&ML Logo" width="600">
+</p>
 
 ## Python scripts
 Everyone can change the value of the parameter "**Hamiltonian =**" in the **main.py** file to compare the results of different optimizers.  

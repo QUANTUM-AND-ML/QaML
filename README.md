@@ -30,7 +30,6 @@
 </p>
 <br />
 
-s
 
 
 ## Quantum & Machine Learning

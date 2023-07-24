@@ -47,8 +47,19 @@ In this paper, motivated by the natural graph representation of quantum circuits
 ## Results display
 **Table 1.** Noiseless expectation values of random circuits with different number of qubits and depth of circuits are predicted. The GNNs estimator is trained using dataset consisting of 10000 classically simulated quantum circuits and epoch is set as 50. In the table, “*N*” represents the number of qubits, and “*P*” represents the circuit depth.
 <p align="center">
-<img src="figures/Table_1.png" alt="Table 1" width="width:80%;">
+<img src="figures/Table_1.png" alt="Table 1" width="800">
 </p>
+
+**Table 2.** Noisy expectation values of random circuits with different number of qubits and depth of circuits are predicted. The GNNs estimator is trained using dataset consisting of 10000 classically simulated quantum circuits and epoch is set as 50. In the table, “*N*” represents the number of qubits, and “*P*” represents the circuit depth.
+<p align="center">
+<img src="figures/Table_2.png" alt="Table 1" width="800">
+</p>
+
+<p align="center">
+<img src="figures/Table_2.png" alt="Table 1" width="800">
+</p>
+**Figure 1.** The scalable performance of the GNNs estimator. The GNNs estimator is trained using random circuit datasets with $N ̃ $ or N ̃_withnoise= 3, 5 and 7 qubits under noisy and noiseless situations. The GNNs estimator after training is used to predict the expectation values of random circuits with N= 7, 11 and 16 qubits.
+
 
 ## Python scripts
 Everyone can change the value of the parameter "**Hamiltonian =**" in the **main.py** file to compare the results of different optimizers.  

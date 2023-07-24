@@ -61,7 +61,7 @@ In this paper, motivated by the natural graph representation of quantum circuits
 **Figure 1.** The scalable performance of the GNNs estimator. The GNNs estimator is trained using random circuit datasets with $\tilde{N}$ or $\tilde{N} _{withnoise} =$ 3, 5 and 7 qubits under noisy and noiseless situations. The GNNs estimator after training is used to predict the expectation values of random circuits with $N =$ 7, 11 and 16 qubits.
 
 ## Python scripts
-Here is a **brief introduction** to each python file for better understanding and usage:
+Here is the **brief introduction** to each python file for better understanding and usage:
 
 * "main.py" primarily includes dataset splitting and the **training** and **testing** of the neural network.
 * "Dataset.py" mainly includes the generation and saving of a large amount of datasets.

@@ -37,7 +37,7 @@ class MyDataset(InMemoryDataset):
         for count in range(10000): # the number of circuits generated
 
             # generate dataset
-            # 量子线路的噪声参数
+            # Noise parameters of Quantum circuit
             number_of_qubit = 7
             if count > 10000 - 2000:
                 number_of_qubit = 11
@@ -45,10 +45,10 @@ class MyDataset(InMemoryDataset):
             # Noisy Simulator. The dataset is saved in a folder named data.
             T1 = [197.79, 158.07, 278.36, 223.29, 109.91, 236.63, 193.96,197.79, 158.07, 278.36, 223.29, 109.91, 236.63, 193.96,197.79, 158.07]
             T2 = [97.02, 48.06, 83.1, 211, 126.96, 188.44, 291.83,97.02, 48.06, 83.1, 211, 126.96, 188.44, 291.83,97.02, 48.06]
-            # 读出错误(非真实量子计算机)
+            # Read error (not real Quantum computer)
             P01 = [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01]
             P10 = [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01]
-            # 自己定义的门错误(非真实量子计算机)
+            # Self defined gate error (non real Quantum computer)
             gateErrors = [['rz', 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001],
                           ['x',  0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001],
                           ['sx', 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001, 0.0001],
@@ -99,9 +99,7 @@ class MyDataset(InMemoryDataset):
                           ['cx', 0.00806, 0.00872, 0.00914, 0.007755, 0.00806, 0.00616, 0.00577]]
             '''
 
-            # 注释噪声
-            # 退极化噪声添加
-            # Error probabilities
+            # Depolarization noise addition
 
             # Add errors to noise model
             noise_model = noise.NoiseModel()
@@ -112,7 +110,7 @@ class MyDataset(InMemoryDataset):
                         depolarizing_error((gateErrors[3][i + 1] + gateErrors[3][k + 1]) / 2, 2),
                         ['cx'], [i, k])
 
-            # 加入T1和T2
+            # Add T1 and T2
             # Instruction times (in nanoseconds)
             time_reset = 1000  # 1 microsecond
             time_measure = 1000  # 1 microsecond
@@ -151,10 +149,11 @@ class MyDataset(InMemoryDataset):
                 for k in range(number_of_qubit):
                     noise_model.add_quantum_error(errors_cx[j][k], "cx", [j, k])
 
-            # 添加读出错误
+            # Add Read Error
             # Measurement miss-assignement probabilities
             for i in range(number_of_qubit):
                 noise_model.add_readout_error(ReadoutError([[1 - P10[i], P10[i]], [P01[i], 1 - P01[i]]]), [i])
+            
             number_CNNs_t = [0]
             number_CNNs_h = [0]
             number_CNNs_i = [0]
@@ -208,44 +207,10 @@ class MyDataset(InMemoryDataset):
 
             # Calculation of expectation value
             expected_value_GAT = expectation_calculation_qiskit(circuit_GAT, number_of_qubit , noise_model)
-            #expected_value_CNNs = float(expectation_calculation_qiskit(circuit_CNNs, number_of_qubit, noise_model))
+            expected_value_CNNs = float(expectation_calculation_qiskit(circuit_CNNs, number_of_qubit, noise_model))
             #if round(expected_value_GAT * 1000) != round(expected_value_CNNs * 1000):
                 #wrong = wrong + 1
-            '''
-            cir1 = Pst_calculation_qiskit(circuit_CNNs, [], number_of_qubit)
-            cir_CNNs = cir1.pst_calculation_qiskit()
-            depth_CNNs[0] = (cir_CNNs.depth() + 1) // 2
-
-            cir2 = Pst_calculation_qiskit(circuit_GAT, [], number_of_qubit)
-            cir_GAT = cir2.pst_calculation_qiskit()
-            depth_GAT[0] = (cir_GAT.depth() + 1) // 2
-
-            #width[0] = cir1_circuit.width()
-            
-            # 仿真得到实际CNNs的PST
-            # Create noisy simulator backend
-            sim_noise = AerSimulator(noise_model = noise_model)
-            # Transpile circuit for noisy basis gates
-            circ_GAT_noise = transpile(cir_GAT, sim_noise)
-            result_GAT_noise = sim_noise.run(circ_GAT_noise, shots=10000).result()
-            #print(result_GAT_noise.get_counts(0).get('0000000'))
-            if result_GAT_noise.get_counts(0).get('0000000') == None:
-                PST_CNNs = 0
-            else:
-                PST_CNNs = result_GAT_noise.get_counts(0).get('0000000') / 10000
-
-            # 仿真得到实际GAT的PST
-            # Create noisy simulator backend
-            sim_noise = AerSimulator(noise_model=noise_model)
-            # Transpile circuit for noisy basis gates
-            circ_GAT_noise = transpile(cir_GAT, sim_noise)
-            result_GAT_noise = sim_noise.run(circ_GAT_noise, shots=10000).result()
-            if result_GAT_noise.get_counts(0).get('0000000') == None:
-                PST_GAT = 0
-            else:
-                PST_GAT = result_GAT_noise.get_counts(0).get('0000000') / 10000
-            '''
-            print('序号：', count)
+            print('Number：', count)
             print('number of GAT gates:', number_GAT_gates, 'expected value GAT:', expected_value_GAT)
             print('node_index:', node_mark[0])
             if count_gate_last_qubit > 0:
@@ -267,19 +232,12 @@ class MyDataset(InMemoryDataset):
             graph_label = round(expected_value_GAT, 3)
 
             data = Data(x = x, edge_index = edge_index)
-            data.y = torch.tensor(graph_label, dtype = torch.float) # 整个图的标签
+            data.y = torch.tensor(graph_label, dtype = torch.float) # Label of the entire image
             data.graph_attr = graph_features
             data.node_index = torch.tensor(node_mark[0], dtype = torch.float)
             #print(data.graph_attr)
             data_list.append(data)
             #print(data)
-        print('wrong的次数', wrong)
+        print('Number of times of wrong', wrong)
         data, slices = self.collate(data_list)
         torch.save((data, slices), self.processed_paths[0])
-
-dataset = MyDataset(root = 'data/')
-data = dataset[0]
-print(data.x)
-
-
-

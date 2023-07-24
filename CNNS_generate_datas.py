@@ -49,7 +49,3 @@ def CNNs_generate_datas(qubits, Number_of_gates_of_per_qubit):
     #qc.draw(output='mpl')
     #plt.show()
     return circuit_list, circ
-
-#circuit_list, circ = CNNs_generate_datas(7,5)
-#print(circuit_list)
-#print(circ)

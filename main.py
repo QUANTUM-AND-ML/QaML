@@ -7,7 +7,7 @@ from torch_geometric.loader import DataLoader
 from torch_geometric.datasets import TUDataset
 from Dataset import MyDataset
 import matplotlib.pyplot as plt
-from GAT import GATRegressor, train
+from GNN import GATRegressor, train
 from sklearn.metrics import r2_score
 import numpy as np
 

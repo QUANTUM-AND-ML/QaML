@@ -47,7 +47,7 @@ In this paper, motivated by the natural graph representation of quantum circuits
 ## Results display
 **Table 1.** Noiseless expectation values of random circuits with different number of qubits and depth of circuits are predicted. The GNNs estimator is trained using dataset consisting of 10000 classically simulated quantum circuits and epoch is set as 50. In the table, “*N*” represents the number of qubits, and “*P*” represents the circuit depth.
 <p align="center">
-<img src="figures/Table_1.png" alt="Table 1" width="max-width:80%;">
+<img src="figures/Table_1.png" alt="Table 1" width="width:80%;">
 </p>
 
 ## Python scripts

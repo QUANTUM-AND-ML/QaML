@@ -48,7 +48,7 @@ In this paper, motivated by the natural graph representation of quantum circuits
 <img src="figures/Figure_1.png" alt="Table 1" width="800">
 </p>
 
-**Figure 1.** The framework for expectation value prediction. a) Generate random quantum circuits. b) Transform the random quantum circuits into graph structures. c) Incorporate noise information into the graph nodes of the quantum circuits, train the graph neural network, and predict the expectation values of quantum circuits.
+**Figure 1.** The framework for expectation value prediction. **a)** Generate random quantum circuits. **b)** Transform the random quantum circuits into graph structures. **c)** Incorporate noise information into the graph nodes of the quantum circuits, train the graph neural network, and predict the expectation values of quantum circuits.
 
 ## Results display
 **Table 1.** Noiseless expectation values of random circuits with different number of qubits and depth of circuits are predicted. The GNNs estimator is trained using dataset consisting of 10000 classically simulated quantum circuits and epoch is set as 50. In the table, “*N*” represents the number of qubits, and “*P*” represents the circuit depth.

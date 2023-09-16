@@ -45,7 +45,7 @@ Relevant scripts and data for the paper entitled "Output Estimation of Quantum C
 In this paper, motivated by the natural graph representation of quantum circuits, we propose a **Graph Neural Networks** (*GNNs*) based scheme to **predict output expectation values of quantum circuits under noisy and noiseless situations**. We first generate two large datasets which are classically simulated quantum circuits with analytical expectation values and random quantum circuits with noisy expectation values obtained on noisy simulators. Then, we transform each circuit in above datasets into the corresponding graph with gates and circuit properties as node features, where noise properties are embed as node features for noisy expectation values estimation. Next, graph neural network estimator is trained to predict single-qubit and two-qubits noisy and noiseless expectation values. Evaluated on 100 quantum circuits, the graph neural network estimator can achieve more than **0.90 $R^2$ scores**, up to **0.998** and **0.991 $R^2$ scores** under noiseless and noisy situations. Notably, our GNNs estimator is designed to be scalable, where the GNNs estimator trained using small-scale quantum circuits with few qubits and low depth of quantum circuits can effectively predict larger-scale quantum circuits.
 
 <p align="center">
-<img src="figures/Figure_1.png" alt="Table 1" width="800">
+<img src="figures/Figure_1.png" alt="Figure 1" width="800">
 </p>
 
 **Figure 1.** The framework for expectation value prediction. **a**) Generate random quantum circuits. **b**) Transform the random quantum circuits into graph structures. **c**) Incorporate noise information into the graph nodes of the quantum circuits, train the graph neural network, and predict the expectation values of quantum circuits.
@@ -62,13 +62,13 @@ In this paper, motivated by the natural graph representation of quantum circuits
 </p>
 
 <p align="center">
-<img src="figures/Figure_2.png" alt="Table 1" width="600">
+<img src="figures/Figure_2.png" alt="Figure 2" width="600">
 </p>
 
 **Figure 2.** The scalable performance of the GNNs estimator. The GNNs estimator is trained using random circuit datasets with $\tilde{N}$ or $\tilde{N} _{withnoise} =$ 3, 5 and 7 qubits under noisy and noiseless situations. The GNNs estimator after training is used to predict the expectation values of random circuits with $N =$ 7, 11 and 16 qubits.
 
 <p align="center">
-<img src="figures/Figure_3.png" alt="Table 1" width="580">
+<img src="figures/Figure_3.png" alt="Figure 3" width="550">
 </p>
 
 **Figure 3.** The scalable performance of the GNNs estimator. The comparison of the scalable performance between the GNNs estimator and the CNNs estimator. The quantum circuits with 3, 4, and 5 qubits are used as the training set to predict the expectation values of quantum circuits with 7, 11, and 16 qubits.

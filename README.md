@@ -33,7 +33,7 @@
 
 
 ## Quantum & Machine Learning
-Relevant scripts and data for the paper entitled "Output Estimation of Quantum Circuits based on Graph Neural Network"
+Relevant scripts and data for the paper entitled "Output Estimation of Quantum Circuits based on Graph Neural Networks"
 
 ## Table of contents
 * [**Main work**](#Main-work)
@@ -66,6 +66,12 @@ In this paper, motivated by the natural graph representation of quantum circuits
 </p>
 
 **Figure 2.** The scalable performance of the GNNs estimator. The GNNs estimator is trained using random circuit datasets with $\tilde{N}$ or $\tilde{N} _{withnoise} =$ 3, 5 and 7 qubits under noisy and noiseless situations. The GNNs estimator after training is used to predict the expectation values of random circuits with $N =$ 7, 11 and 16 qubits.
+
+<p align="center">
+<img src="figures/Figure_3.png" alt="Table 1" width="600">
+</p>
+
+**Figure 3.** The scalable performance of the GNNs estimator. The comparison of the scalable performance between the GNNs estimator and the CNNs estimator. The quantum circuits with 3, 4, and 5 qubits are used as the training set to predict the expectation values of quantum circuits with 7, 11, and 16 qubits.
 
 ## Python scripts
 Here is the **brief introduction** to each python file for better understanding and usage:

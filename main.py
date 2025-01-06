@@ -50,7 +50,7 @@ print(model)
 # Define Loss function and optimizer
 #criterion = torch.nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.01)
-num_epochs = 30
+num_epochs = 200
 
 # Test-and-set equipment
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

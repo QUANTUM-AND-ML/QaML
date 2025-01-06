@@ -40,8 +40,8 @@ test_loader = DataLoader(test_dataset, batch_size = len(test_dataset))
 #print(test_dataset.graph_label.view(-1, 1).float())
 # initial model
 in_features = dataset.num_node_features
-hidden_features = 25
-out_features = 25
+hidden_features = 31
+out_features = 31
 num_layers = 4
 num_heads = 2
 model = GATRegressor(in_features, hidden_features, out_features, num_layers, num_heads)

@@ -50,30 +50,29 @@ We propose two schemes: the Indirect Comparison scheme, which involves directly 
 <img src="figures/Figure_1.png" alt="Figure 1" width="800">
 </p>
 
-**Figure 1.** The framework for expectation value prediction. **a**) Generate random quantum circuits. **b**) Transform the random quantum circuits into graph structures. **c**) Incorporate noise information into the graph nodes of the quantum circuits, train the graph neural network, and predict the expectation values of quantum circuits.
+**Figure 1.** The framework for expectation values prediction. **a)** Generate random quantum circuits. **b)** Transform the random quantum circuits into graph structures. **c)** Incorporate noise information into the graph nodes of the quantum circuits, train GNNs, and predict the expectation values of quantum circuits.
+
+<p align="center">
+<img src="figures/Figure_2.png" alt="Figure 2" width="800">
+</p>
+
+**Figure 2.** The framework of circuit performance comparison prediction. Firstly, convert the two quantum circuits into one graph, where each node feature vector includes information about the noise. Input the graph into the GNNs to directly predict the performance comparison of the two circuits.
+
 
 ## Results display
-**Table 1.** Noiseless expectation values of random circuits with different number of qubits and depth of circuits are predicted. The GNNs estimator is trained using dataset consisting of 10000 classically simulated quantum circuits and epoch is set as 50. In the table, “*N*” represents the number of qubits, and “*P*” represents the circuit depth.
-<p align="center">
-<img src="figures/Table_1.png" alt="Table 1" width="700">
-</p>
 
-**Table 2.** Noisy expectation values of random circuits with different number of qubits and depth of circuits are predicted. The GNNs estimator is trained using dataset consisting of 10000 classically simulated quantum circuits and epoch is set as 50. In the table, “*N*” represents the number of qubits, and “*P*” represents the circuit depth.
-<p align="center">
-<img src="figures/Table_2.png" alt="Table 1" width="700">
-</p>
 
 <p align="center">
-<img src="figures/Figure_2.png" alt="Figure 2" width="600">
+<img src="figures/Figure_3.png" alt="Figure 3" width="600">
 </p>
 
-**Figure 2.** The scalable performance of the GNNs estimator. The GNNs estimator is trained using random circuit datasets with $\tilde{N}$ or $\tilde{N} _{withnoise} =$ 3, 5 and 7 qubits under noisy and noiseless situations. The GNNs estimator after training is used to predict the expectation values of random circuits with $N =$ 7, 11 and 16 qubits.
+**Figure 3.** Single-qubit expectation values prediction by GNNs under noisy and noiseless conditions.
 
 <p align="center">
-<img src="figures/Figure_3.png" alt="Figure 3" width="550">
+<img src="figures/Figure_4.png" alt="Figure 4" width="550">
 </p>
 
-**Figure 3.** The scalable performance of the GNNs estimator. The comparison of the scalable performance between the GNNs estimator and the CNNs estimator. The quantum circuits with 3, 4, and 5 qubits are used as the training set to predict the expectation values of quantum circuits with 7, 11, and 16 qubits.
+**Figure 4.** Prediction accuracy of Indirect Comparison and Direct Comparison schemes for parametrized quantum circuit performance.
 
 ## Python scripts
 Here is the **brief introduction** to each python file for better understanding and usage:

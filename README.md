@@ -33,7 +33,7 @@
 
 
 ## Quantum & Machine Learning
-Relevant scripts and data for the paper entitled "Output Estimation of Quantum Circuits based on Graph Neural Networks"
+Relevant scripts and data for the paper entitled "Output Prediction of Quantum Circuits based on Graph Neural Networks"
 
 ## Table of contents
 * [**Main work**](#Main-work)
@@ -42,7 +42,9 @@ Relevant scripts and data for the paper entitled "Output Estimation of Quantum C
 * [**Dependencies**](#Dependencies)
 
 ## Main work
-In this paper, motivated by the natural graph representation of quantum circuits, we propose a **Graph Neural Networks** (*GNNs*) based scheme to **predict output expectation values of quantum circuits under noisy and noiseless situations**. We first generate two large datasets which are classically simulated quantum circuits with analytical expectation values and random quantum circuits with noisy expectation values obtained on noisy simulators. Then, we transform each circuit in above datasets into the corresponding graph with gates and circuit properties as node features, where noise properties are embed as node features for noisy expectation values estimation. Next, graph neural network estimator is trained to predict single-qubit and two-qubits noisy and noiseless expectation values. Evaluated on 100 quantum circuits, the graph neural network estimator can achieve more than **0.90 $R^2$ scores**, up to **0.998** and **0.991 $R^2$ scores** under noiseless and noisy situations. Notably, our GNNs estimator is designed to be scalable, where the GNNs estimator trained using small-scale quantum circuits with few qubits and low depth of quantum circuits can effectively predict larger-scale quantum circuits.
+This paper proposes a Graph Neural Networks (GNNs)-based framework to predict the output expectation values of quantum circuits under noisy and noiseless conditions and compare the performance of different parameterized quantum circuits (PQCs).
+We begin by constructing datasets under noisy and noiseless conditions using a non-parameterized quantum gate set to predict circuit expectation values. The node feature vectors for GNNs are specifically designed to include noise information. In our simulations, we compare the prediction performance of GNNs in both noisy and noiseless conditions, against Convolutional Neural Networks (CNNs) on the same dataset and their qubit scalability. GNNs demonstrate superior prediction accuracy across diverse conditions. Subsequently, we utilize the parameterized quantum gate set to construct noisy PQCs and compute the ground state energy of hydrogen molecules using the Variational Quantum Eigensolver (VQE).
+We propose two schemes: the Indirect Comparison scheme, which involves directly predicting the ground state energy and subsequently comparing circuit performances, and the Direct Comparison scheme, which directly predicts the relative performance of the two circuits. Simulation results indicate that the Direct Comparison scheme significantly outperforms the Indirect Comparison scheme by an average of 36.2\% on the same dataset, providing a new and effective perspective for using GNNs to predict the overall properties of PQCs, specifically by focusing on their performance differences.
 
 <p align="center">
 <img src="figures/Figure_1.png" alt="Figure 1" width="800">

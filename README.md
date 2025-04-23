@@ -1,5 +1,5 @@
 <p align="center">
-<img src="figures/Q&ML.png" alt="Q&ML Logo" width="600">
+<img src="https://cdn.jsdelivr.net/gh/QUANTUM-AND-ML/QaML@main/figures/Q&ML.png" alt="Q&ML Logo" width="600">
 </p>
 
 <h2><p align="center">A PyThon Library for Quantum Computation and Machine Learning</p></h2>
@@ -47,13 +47,13 @@ We begin by constructing datasets under noisy and noiseless conditions using a n
 We propose two schemes: the Indirect Comparison scheme, which involves directly predicting the ground state energy and subsequently comparing circuit performances, and the Direct Comparison scheme, which directly predicts the relative performance of the two circuits. Simulation results indicate that the Direct Comparison scheme significantly outperforms the Indirect Comparison scheme by an average of 36.2\% on the same dataset, providing a new and effective perspective for using GNNs to predict the overall properties of PQCs, specifically by focusing on their performance differences.
 
 <p align="center">
-<img src="figures/Figure_1.png" alt="Figure 1" width="800">
+<img src="https://cdn.jsdelivr.net/gh/QUANTUM-AND-ML/QaML@main/figures/Figure_1.png" alt="Figure 1" width="800">
 </p>
 
 **Figure 1.** The framework for expectation values prediction. **a)** Generate random quantum circuits. **b)** Transform the random quantum circuits into graph structures. **c)** Incorporate noise information into the graph nodes of the quantum circuits, train GNNs, and predict the expectation values of quantum circuits.
 
 <p align="center">
-<img src="figures/Figure_2.png" alt="Figure 2" width="760">
+<img src="https://cdn.jsdelivr.net/gh/QUANTUM-AND-ML/QaML@main/figures/Figure_2.png" alt="Figure 2" width="760">
 </p>
 
 **Figure 2.** The framework of circuit performance comparison prediction. Firstly, convert the two quantum circuits into one graph, where each node feature vector includes information about the noise. Input the graph into the GNNs to directly predict the performance comparison of the two circuits.
@@ -63,13 +63,13 @@ We propose two schemes: the Indirect Comparison scheme, which involves directly 
 
 
 <p align="center">
-<img src="figures/Figure_3.png" alt="Figure 3" width="560">
+<img src="https://cdn.jsdelivr.net/gh/QUANTUM-AND-ML/QaML@main/figures/Figure_3.png" alt="Figure 3" width="560">
 </p>
 
 **Figure 3.** Single-qubit expectation values prediction by GNNs under noisy and noiseless conditions.
 
 <p align="center">
-<img src="figures/Figure_4.png" alt="Figure 4" width="560">
+<img src="https://cdn.jsdelivr.net/gh/QUANTUM-AND-ML/QaML@main/figures/Figure_4.png" alt="Figure 4" width="560">
 </p>
 
 **Figure 4.** Prediction accuracy of Indirect Comparison and Direct Comparison schemes for parametrized quantum circuit performance.

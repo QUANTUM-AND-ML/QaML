@@ -33,7 +33,7 @@
 
 
 ## Quantum & Machine Learning
-Relevant scripts and data for the paper entitled "Output Prediction of Quantum Circuits based on Graph Neural Networks"
+Relevant scripts and data for the paper entitled "Output Prediction of Quantum Circuits based on Graph Neural Networks(https://www.sciencedirect.com/science/article/pii/S0375960125003214)"
 
 ## Table of contents
 * [**Main work**](#Main-work)

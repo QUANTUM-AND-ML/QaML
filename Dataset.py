@@ -236,7 +236,6 @@ class MyDataset(InMemoryDataset):
             data.node_index = torch.tensor(node_mark[0], dtype = torch.float)
             #print(data.graph_attr)
             data_list.append(data)
-            #print(data)
         print('Number of times of wrong', wrong)
         data, slices = self.collate(data_list)
         torch.save((data, slices), self.processed_paths[0])

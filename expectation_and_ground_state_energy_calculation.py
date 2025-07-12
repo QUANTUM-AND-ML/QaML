@@ -63,7 +63,6 @@ def expectation_calculation_qiskit(circuit_list, number_of_qubits):
         for j in range(len(key[i])):
             if key[i][j] == '1':
                 valcount[j] += val[i]
-
     return valcount[0]
 
 # Calculate the expectation value of the quantum circuit under noisy conditions

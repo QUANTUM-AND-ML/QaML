@@ -234,7 +234,3 @@ class Dataset_graph_nqubits:
             self.readout10[0] = 0
 
         return self.Feature_vector, self.Adjacency_matrix, self.Label
-
-
-
-

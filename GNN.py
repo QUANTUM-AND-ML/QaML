@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 from torch_geometric.nn import GATConv, global_mean_pool
 
-
 leaky_relu = nn.LeakyReLU(negative_slope = 0.02)
 
 # Defining the GAT model

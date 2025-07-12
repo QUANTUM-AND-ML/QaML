@@ -35,4 +35,3 @@ def GNNs_generate_datas(Number_of_layers = 5):
 
 #circuits = GNNs_generate_datas(5)
 #print(circuits)
-

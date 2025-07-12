@@ -88,3 +88,4 @@ model = CnnModel(num_outputs = 1)
 
 # Print model structure
 print(model)
+

@@ -148,7 +148,6 @@ def neighbor(ansatz,order):
                         Controlled_Bit[1] = i
                         Quantum_Gate_Marking[3] = 3
                         break
-
     else:
         print('Looking for an unknown quantum gate')
     return Control_Bit,Controlled_Bit,Quantum_Gate_Marking
@@ -160,7 +159,6 @@ def Search_parameters(ansatz, order):
         if ansatz[i][0] == 'h' or ansatz[i][0] == 't':
             new_order = new_order + 1
     return new_order
-
 
 # Delete initial CNOT gate
 def rule_1(ansatz):

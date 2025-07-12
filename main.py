@@ -11,7 +11,6 @@ from GNN import GATRegressor, train
 from sklearn.metrics import r2_score
 import numpy as np
 
-
 # Load Dataset
 dataset = MyDataset(root='data/')
 #dataset = dataset.shuffle()

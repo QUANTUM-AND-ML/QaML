@@ -33,7 +33,7 @@
 
 
 ## Quantum & Machine Learning
-Relevant scripts and data for the paper entitled "[**Output Prediction of Quantum Circuits based on Graph Neural Networks**](https://arxiv.org/abs/2504.00464)". Subsequent work implementing quantum kernel design based on this GNNs approach can be found in the paper "[**Hardware-Aware Quantum Kernel Design Based on Graph Neural Networks**](https://arxiv.org/abs/2506.21161).
+Relevant scripts and data for the paper entitled "[**Output Prediction of Quantum Circuits based on Graph Neural Networks**](https://arxiv.org/abs/2504.00464)". Subsequent work implementing quantum kernel design based on this GNNs approach can be found in the paper "[**HaQGNN: Hardware-Aware Quantum Kernel Design Based on Graph Neural Networks**](https://arxiv.org/abs/2506.21161).
 
 ## Table of contents
 * [**Main work**](#Main-work)
